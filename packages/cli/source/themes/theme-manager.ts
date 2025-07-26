@@ -57,6 +57,47 @@ export class ThemeManager {
 		this.loadThemesFromFile();
 	}
 
+	private detectSystemTheme(): 'dark' | 'light' {
+		// Check environment variables that might indicate theme preference
+		const colorTerm = process.env['COLORFGBG'];
+		const term = process.env['TERM'];
+		
+		// Check macOS system appearance
+		try {
+			const { execSync } = require('child_process');
+			if (process.platform === 'darwin') {
+				const result = execSync('defaults read -g AppleInterfaceStyle 2>/dev/null || echo "Light"', { encoding: 'utf8' });
+				if (result.trim() === 'Dark') {
+					return 'dark';
+				}
+			}
+		} catch (error) {
+			// Fallback if system detection fails
+		}
+
+		// Check COLORFGBG environment variable (format: foreground;background)
+		if (colorTerm) {
+			const parts = colorTerm.split(';');
+			if (parts.length >= 2 && parts[1]) {
+				const bg = parseInt(parts[1], 10);
+				// Lower numbers typically indicate darker backgrounds
+				if (bg >= 0 && bg <= 7) {
+					return 'dark';
+				} else if (bg >= 8 && bg <= 15) {
+					return 'light';
+				}
+			}
+		}
+
+		// Check terminal type
+		if (term && (term.includes('dark') || term.includes('256color'))) {
+			return 'dark';
+		}
+
+		// Default to dark theme for most terminal environments
+		return 'dark';
+	}
+
 	private loadThemesFromFile() {
 		try {
 			// Embedded themes data
@@ -159,18 +200,23 @@ export class ThemeManager {
 				this.registerTheme(theme);
 			});
 			
-			// Set default active theme
-			this.setActiveTheme('Default Light');
+			// Auto-select theme based on system detection
+			const systemTheme = this.detectSystemTheme();
+			const defaultThemeName = systemTheme === 'dark' ? 'Default Dark' : 'Default Light';
+			this.setActiveTheme(defaultThemeName);
 		} catch (error) {
 			console.error('Failed to load embedded themes:', error);
 			// Fallback to default theme
+			const systemTheme = this.detectSystemTheme();
 			this.registerDefaultTheme();
-			this.setActiveTheme('Default Light');
+			const defaultThemeName = systemTheme === 'dark' ? 'Default Dark' : 'Default Light';
+			this.setActiveTheme(defaultThemeName);
 		}
 	}
 
 	private registerDefaultTheme() {
-		const defaultTheme = new CustomTheme('Default Light', {
+		// Register both light and dark fallback themes
+		const lightTheme = new CustomTheme('Default Light', {
 			colors: {
 				primary: 'blue',
 				accent: 'magenta',
@@ -185,7 +231,25 @@ export class ThemeManager {
 			},
 			preview: 'Default light theme'
 		});
-		this.registerTheme(defaultTheme);
+		
+		const darkTheme = new CustomTheme('Default Dark', {
+			colors: {
+				primary: 'cyan',
+				accent: 'yellow',
+				error: 'red',
+				warning: 'yellow',
+				success: 'green',
+				text: 'white',
+				secondary: 'gray',
+				border: 'gray',
+				input: 'white',
+				selection: 'cyan'
+			},
+			preview: 'Default dark theme'
+		});
+		
+		this.registerTheme(lightTheme);
+		this.registerTheme(darkTheme);
 	}
 
 	registerTheme(theme: Theme): void {
