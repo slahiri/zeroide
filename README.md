@@ -1,6 +1,6 @@
 # ZeroIDE
 
-![ZeroIDE](assets/hero.png)
+![ZeroIDE](https://github.com/slahiri/zeroide/blob/main/assets/hero.png)
 
 [![npm version](https://badge.fury.io/js/zeroide.svg)](https://badge.fury.io/js/zeroide)
 [![npm downloads](https://img.shields.io/npm/dm/zeroide.svg)](https://www.npmjs.com/package/zeroide)
