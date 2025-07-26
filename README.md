@@ -15,7 +15,7 @@ A CLI-based AI coder built with React and Ink.
 ## Installation
 
 ```bash
-npm install -g @zeroide
+pnpm add -g zeroide
 ```
 
 ## Usage
@@ -28,16 +28,16 @@ zeroide
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Build the project
-npm run build
+pnpm build
 
 # Run the CLI
-npm run cli
+pnpm cli
 
 # Development mode with watch
-npm run dev
+pnpm dev
 ```
 
 ## License
