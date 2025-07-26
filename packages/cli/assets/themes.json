@@ -1,0 +1,174 @@
+{
+  "themes": [
+    {
+      "name": "Default Dark",
+      "type": "built-in",
+      "colors": {
+        "primary": "cyan",
+        "accent": "yellow",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "white",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "white",
+        "selection": "cyan"
+      },
+      "preview": "Dark theme with cyan accents"
+    },
+    {
+      "name": "Default Light",
+      "type": "built-in",
+      "colors": {
+        "primary": "blue",
+        "accent": "magenta",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "black",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "black",
+        "selection": "blue"
+      },
+      "preview": "Light theme with blue accents"
+    },
+    {
+      "name": "Dracula",
+      "type": "built-in",
+      "colors": {
+        "primary": "magenta",
+        "accent": "cyan",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "white",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "white",
+        "selection": "magenta"
+      },
+      "preview": "Purple theme with cyan accents"
+    },
+    {
+      "name": "GitHub Dark",
+      "type": "built-in",
+      "colors": {
+        "primary": "blue",
+        "accent": "red",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "white",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "white",
+        "selection": "blue"
+      },
+      "preview": "GitHub-style dark theme"
+    },
+    {
+      "name": "GitHub Light",
+      "type": "built-in",
+      "colors": {
+        "primary": "blue",
+        "accent": "red",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "black",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "black",
+        "selection": "blue"
+      },
+      "preview": "GitHub-style light theme"
+    },
+    {
+      "name": "Monokai",
+      "type": "built-in",
+      "colors": {
+        "primary": "red",
+        "accent": "green",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "white",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "white",
+        "selection": "red"
+      },
+      "preview": "High contrast red/green theme"
+    },
+    {
+      "name": "Solarized Dark",
+      "type": "built-in",
+      "colors": {
+        "primary": "blue",
+        "accent": "green",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "white",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "white",
+        "selection": "blue"
+      },
+      "preview": "Easy-on-eyes dark theme"
+    },
+    {
+      "name": "Solarized Light",
+      "type": "built-in",
+      "colors": {
+        "primary": "blue",
+        "accent": "green",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "black",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "black",
+        "selection": "blue"
+      },
+      "preview": "Easy-on-eyes light theme"
+    },
+    {
+      "name": "Nord",
+      "type": "built-in",
+      "colors": {
+        "primary": "blue",
+        "accent": "cyan",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "white",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "white",
+        "selection": "blue"
+      },
+      "preview": "Arctic-inspired theme"
+    },
+    {
+      "name": "Tokyo Night",
+      "type": "built-in",
+      "colors": {
+        "primary": "magenta",
+        "accent": "blue",
+        "error": "red",
+        "warning": "yellow",
+        "success": "green",
+        "text": "white",
+        "secondary": "gray",
+        "border": "gray",
+        "input": "white",
+        "selection": "magenta"
+      },
+      "preview": "Tokyo-inspired dark theme"
+    }
+  ]
+} 
