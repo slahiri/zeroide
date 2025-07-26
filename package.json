@@ -1,0 +1,32 @@
+{
+	"name": "zeroide",
+	"version": "0.1.0",
+	"description": "ZeroIDE CLI-based AI coder",
+	"license": "Apache-2.0",
+	"author": {
+		"name": "Siddhartha Lahiri",
+		"email": "siddhartha.lahiri@gmail.com"
+	},
+	"bin": {
+		"zeroide": "dist/cli.js"
+	},
+	"type": "module",
+	"engines": {
+		"node": ">=16"
+	},
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"cli": "node dist/cli.js"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"@zeroide/cli": "^0.1.4"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.3",
+		"@types/node": "^24.1.0"
+	}
+}
