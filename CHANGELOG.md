@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.6] - 2025-07-26
+
+### Changed
+- Updated README with hero image replacing ASCII art
+- Enhanced project description with historical context about zero from India
+- Improved visual branding and messaging
+
 ## [0.1.5] - 2025-07-26
 
 ### Added
