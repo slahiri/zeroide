@@ -1,0 +1,40 @@
+{
+  "themes": [
+    {
+      "name": "Default Light",
+      "colors": {
+        "primary": "#00d4ff",
+        "secondary": "#808080",
+        "success": "#00ff00",
+        "warning": "#ffaa00",
+        "error": "#ff4444",
+        "accent": "#ff00ff",
+        "text": "#ffffff",
+        "border": "#333333"
+      },
+      "gradients": {
+        "primary": ["#00d4ff", "#0099cc"],
+        "success": ["#00ff00", "#00cc00"]
+      },
+      "preview": "Modern dark theme with cyan accents"
+    },
+    {
+      "name": "classic",
+      "colors": {
+        "primary": "#0066cc",
+        "secondary": "#666666",
+        "success": "#22aa22",
+        "warning": "#dd8800",
+        "error": "#cc2222",
+        "accent": "#8844cc",
+        "text": "#e0e0e0",
+        "border": "#444444"
+      },
+      "gradients": {
+        "primary": ["#0066cc", "#004499"],
+        "success": ["#22aa22", "#118811"]
+      },
+      "preview": "Classic development theme with blue accents"
+    }
+  ]
+}

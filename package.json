@@ -1,6 +1,6 @@
 {
 	"name": "zeroide",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "ZeroIDE CLI-based AI coder",
 	"license": "Apache-2.0",
 	"author": {
@@ -20,7 +20,8 @@
 		"cli": "node dist/cli.js"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"assets"
 	],
 	"dependencies": {
 		"@zeroide/cli": "^0.1.4"
